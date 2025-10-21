@@ -1,4 +1,4 @@
-name: Build LaTeX and Deploy PDF
+name: Build LaTeX CV and Deploy PDF
 
 on:
   push:
@@ -10,13 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Compile LaTeX
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: cv.tex
+      - name: Install LaTeX environment
+        run: sudo apt-get update && sudo apt-get install -y latexmk texlive-full make
+
+      - name: Compile CV using Makefile
+        run: make
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -28,4 +29,4 @@ jobs:
           force_orphan: true
           keep_files: false
           cname: ""
-          commit_message: "Deploy compiled PDF"
+          commit_message: "Deploy compiled CV PDF"
