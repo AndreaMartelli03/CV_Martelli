@@ -82,7 +82,7 @@
 \titlespacing{\section}{0pt}{10pt}{10pt}
 
 %for publications
-\usepackage[style=alphabetic]{biblatex}
+\usepackage[]{biblatex}
 
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
@@ -94,6 +94,13 @@
 	citecolor=blue % Color for citations
 }
 \addbibresource{citations.bib}
+\defbibenvironment{bibliography}
+  {\list{}
+    {\setlength{\leftmargin}{0pt}%
+     \setlength{\itemindent}{0pt}%
+     \setlength{\itemsep}{0.5em}}}
+  {\endlist}
+  {\item}
 
 %for social icons
 \usepackage{fontawesome5}
@@ -147,10 +154,10 @@
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Andrea Martelli} \\[7.5pt]
-\href{https://github.com/AndreaMartelli03}{\raisebox{-0.05\height}\faGithub\ AndreaMartelli03} \ $|$ \ 
+%\href{https://github.com/AndreaMartelli03}{\raisebox{-0.05\height}\faGithub\ AndreaMartelli03} \ $|$ \ 
 %\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
 \href{https://sites.google.com/view/andrea-martelli/}{\raisebox{-0.05\height}\faGlobe \ website} \ $|$ \ 
-\href{mailto:a.martelli2003@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ a.martelli2003@gmail.com} \ $|$ \ 
+\href{mailto:andrea.martelli@studenti.unitn.it}{\raisebox{-0.05\height}\faEnvelope \ andrea.martelli@studenti.unitn.it} \ $|$ \ \href{mailto:a.martelli2003@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ a.martelli2003@gmail.com}$|$ \ 
 \href{tel:+393519505973}{\raisebox{-0.05\height}\faMobile \ +39 351 9505973} \\
 \end{tabularx}
 
@@ -188,17 +195,11 @@ PhD Applicant in Pure Mathematics — Interests: Geometric Analysis, Differentia
 %\href{https://some-link.com}{Link to Demo} 
 \\[3.75pt]
 Advisor: &Alessandro Carlotto\\
-Description: &This thesis is a research work (joint with Alessandro Carlotto) on the study of the moduli space of compact minimal surfaces in Euclidean space having strongly isolated singularities. Up to now, the main points of the discussion are:
-\begin{itemize}
-    \item the smooth dependence results of Brian White \cite{White_SpaceOfSurfaces1987} on the moduli space of smooth compact minimal surfaces in Euclidean space;
-    \item analysis on minimal cones and examples of minimal surfaces with strongly isolated singularities arising as deformation of minimal cones \cite{Simons_MinimalVarieties1968, Caffarelli_Minimal1984};
-    \item understanding how, for a suitable choice of weighted Sobolev spaces, the Fredholm index of the map (Jacobi operator, restriction to the boundary) relates to the geometry of the links at the singularities.
-\end{itemize}\\
+Description: &This thesis is devoted to the study of the moduli space of compact minimal submanifolds in Euclidean space having only strongly isolated singularities.\\
 \textbf{Bachelor's Thesis}: &\emph{The Lusternik-Fet's theorem on the existence of closed geodesics}
 \href{https://andreamartelli03.github.io/tesi-triennale/main.pdf}{(Link)} 
 \\[3.75pt]
 Advisor: & Alessandro Carlotto\\
-Language: & Italian \\
 Description: & This thesis is devoted to prove the Lusternik-Fet's theorem on the existence of closed geodesics in closed Riemannian manifolds using explicitly Ambrosetti-Rabinowitz's Mountain Pass Theorem. 
 \end{tabularx}
 
@@ -297,8 +298,9 @@ Languages: &  Italian (mother tongue), English (C1 level)\\
 
 
 
-
+\nocite{Carlotto,Mazzieri, Marchese}
 \printbibliography
+
 \vfill
 \center{\footnotesize Last updated: \today}
 
