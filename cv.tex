@@ -1,0 +1,293 @@
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+%	The MIT License (MIT)
+%
+%	Copyright (c) 2021 Jitin Nair
+%
+%	Permission is hereby granted, free of charge, to any person obtaining a copy
+%	of this software and associated documentation files (the "Software"), to deal
+%	in the Software without restriction, including without limitation the rights
+%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%	copies of the Software, and to permit persons to whom the Software is
+%	furnished to do so, subject to the following conditions:
+%	
+%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%	THE SOFTWARE.
+%	
+%
+%-----------------------------------------------------------------------------------------------------------------------------------------------%
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black, % Color for normal internal links
+	filecolor=black, % Color for file links
+	urlcolor=black, % Color for external links
+	citecolor=black % Color for citations
+}
+\addbibresource{citations.bib}
+\defbibenvironment{bibliography}
+  {\list{}
+    {\setlength{\leftmargin}{0pt}%
+     \setlength{\itemindent}{0pt}%
+     \setlength{\itemsep}{0.5em}}}
+  {\endlist}
+  {\item}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Andrea Martelli} \\[7.5pt] 
+\href{mailto:martelli@stanford.edu}{\raisebox{-0.05\height}\faEnvelope \ martelli@stanford.edu} \ $|$ \ \href{mailto:a.martelli2003@gmail.com} {\raisebox{-0.05\height}\faEnvelope \ a.martelli2003@gmail.com}
+$|$ \href{https://sites.google.com/view/andrea-martelli}{\raisebox{-0.05\height}\faGlobe\ website} \ $|$ \ 
+%\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
+\faLinkedin \ \href{https://www.linkedin.com/in/andrea-martelli03/}{andrea-martelli03} 
+%\ $|$ \ \href{tel:+393519505973}{\raisebox{-0.05\height}\faMobile \ +39 351 9505973} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+PhD student in Mathematics at Stanford University, interested in Analysis and Geometry.
+%This CV can also be automatically complied and published using GitHub Actions. For details, \href{https://github.com/jitinnair1/autoCV}{click here}.
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2026 - present & PhD at \textbf{Stanford University}. \\
+2024 - 2026 & Master in Advanced Mathematics at \textbf{University of Trento}.  \hfill \normalsize (110/110 cum laude) \\
+
+2021 - 2024 & Bachelor's Degree at \textbf{University of Trento}. \hfill (110/110 cum laude) \\ 
+
+2018-2021 & Diploma in Classical Studies at Military School ‘‘Teulié'', Milano, Italy.
+\end{tabularx}
+
+%--------------
+% PROJECTS
+%----------------
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l X@{} }
+\textbf{Master's Thesis}: &\emph{The moduli space of minimal surfaces with strongly isolated singularities} 
+%\href{https://some-link.com}{Link to Demo} 
+\\[3.75pt]
+Advisor: &Alessandro Carlotto\\
+Description: &This thesis is devoted to the study of the moduli space of compact minimal submanifolds in Euclidean space having only strongly isolated singularities.\\
+\textbf{Bachelor's Thesis}: &\emph{The Lusternik-Fet theorem on the existence of closed geodesics}
+\href{https://andreamartelli03.github.io/tesi-triennale/main.pdf}{(Link)} 
+\\[3.75pt]
+Advisor: & Alessandro Carlotto\\
+Description: & This thesis is devoted to prove the Lusternik-Fet theorem on the existence of closed geodesics in closed Riemannian manifolds using explicitly Ambrosetti-Rabinowitz's Mountain Pass Theorem. 
+\end{tabularx}
+
+
+%------------------
+% ATTENDED EVENTS
+%------------------
+\section{Attended events}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+September 2025, Trento & Workshop: ‘‘Mind the GAP — Young researchers meeting in Geometric Analysis and PDEs''\\
+
+September 2025, Trento & School: ‘‘Three days between Analysis and Geometry in Trento, 4° edition''\\
+
+June 2025, Pisa & Conferences: ‘‘Topics in Geometric Analysis'' \\ 
+
+September 2024, Trento & School: ‘‘Three days between Analysis and Geometry in Trento, 3° edition''\\
+
+June 2024, Padova: & School: ‘‘Geometric problems in Analysis''
+\end{tabularx}
+%--------------------------
+% SEMINARS
+%-------------------------
+%\section{Seminars}
+%\begin{itemize}\end{itemize}
+
+%--------------------------
+% SCHOLARSHIPS
+%-------------------------
+\section{Scholarships}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+2024 & \href{https://cirm.fbk.eu/scholarships}{Scholarship} for the Master’s Program in Mathematics at University of Trento: one of two scholarships awarded for excellence in mathematics under the Department’s strategic project in Analysis and Geometry. Financed by C.I.R.M.
+\end{tabularx}
+
+%--------------------------
+% TUTORING
+%-------------------------
+\section{Teaching}
+Assisted first-year mathematics students at University of Trento through weekly tutoring sessions in:\\
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Calculus 1 & Fall 2024, Fall 2025 (Professor: Anneliese Defranceschi)\\
+Linear Algebra & Fall 2023, Fall 2025 (Professor: Eduardo Luis Solá Conde)
+\end{tabularx}
+
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGES
+%----------------------------------------------------------------------------------------
+\section{Languages}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Italian (mother tongue)\\
+English (C1 level)\\
+%Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+\end{tabularx}
+
+
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS
+%----------------------------------------------------------------------------------------
+%\section{Publications}
+%\begin{refsection}[citations.bib]
+%\nocite{*}
+%\printbibliography[heading=none]
+%\end{refsection}
+
+
+%-------
+%Experience
+%-----------
+%\section{Work Experience}
+%\begin{jobshort}{Designation}{Jan 2021 - present}
+%long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+%\end{jobshort}
+
+
+%\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
+%\item long long line of blah blah that will wrap when the table fills the column width
+%\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
+%\end{joblong}
+  
+
+
+
+\nocite{Carlotto,Mazzieri, Marchese}
+\printbibliography
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}

@@ -1,0 +1,91 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{Carlotto}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=07ac0f6ce177c029ac28a10d9b2f98de}{%
+           family={Carlotto},
+           familyi={C\bibinitperiod},
+           given={Prof.\bibnamedelimi Alessandro},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{07ac0f6ce177c029ac28a10d9b2f98de}
+      \strng{fullhash}{07ac0f6ce177c029ac28a10d9b2f98de}
+      \strng{bibnamehash}{07ac0f6ce177c029ac28a10d9b2f98de}
+      \strng{authorbibnamehash}{07ac0f6ce177c029ac28a10d9b2f98de}
+      \strng{authornamehash}{07ac0f6ce177c029ac28a10d9b2f98de}
+      \strng{authorfullhash}{07ac0f6ce177c029ac28a10d9b2f98de}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Email: \href{mailto:alessandro.carlotto@unitn.it}{alessandro.carlotto@unitn.it}}
+      \field{title}{University of Trento}
+      \true{nocite}
+    \endentry
+    \entry{Marchese}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ae52fb55696fc41133d294c47a440175}{%
+           family={Marchese},
+           familyi={M\bibinitperiod},
+           given={Prof.\bibnamedelimi Andrea},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{ae52fb55696fc41133d294c47a440175}
+      \strng{fullhash}{ae52fb55696fc41133d294c47a440175}
+      \strng{bibnamehash}{ae52fb55696fc41133d294c47a440175}
+      \strng{authorbibnamehash}{ae52fb55696fc41133d294c47a440175}
+      \strng{authornamehash}{ae52fb55696fc41133d294c47a440175}
+      \strng{authorfullhash}{ae52fb55696fc41133d294c47a440175}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Email: \href{mailto:andrea.marchese@unitn.it}{andrea.marchese@unitn.it}}
+      \field{title}{University of Trento}
+      \true{nocite}
+    \endentry
+    \entry{Mazzieri}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c921feb90256c93f1264648b9b3dcb0d}{%
+           family={Mazzieri},
+           familyi={M\bibinitperiod},
+           given={Prof.\bibnamedelimi Lorenzo},
+           giveni={P\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{c921feb90256c93f1264648b9b3dcb0d}
+      \strng{fullhash}{c921feb90256c93f1264648b9b3dcb0d}
+      \strng{bibnamehash}{c921feb90256c93f1264648b9b3dcb0d}
+      \strng{authorbibnamehash}{c921feb90256c93f1264648b9b3dcb0d}
+      \strng{authornamehash}{c921feb90256c93f1264648b9b3dcb0d}
+      \strng{authorfullhash}{c921feb90256c93f1264648b9b3dcb0d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Email: \href{mailto:lorenzo.mazzieri@unitn.it}{lorenzo.mazzieri@unitn.it}}
+      \field{title}{University of Trento}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
